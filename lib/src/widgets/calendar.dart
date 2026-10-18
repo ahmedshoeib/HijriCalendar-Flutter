@@ -79,7 +79,6 @@ class _HijriCalendarState extends State<HijriCalendar> {
   late HijriCalendarSelection _lastSelection;
   late HijriMonth _lastMonth;
   final _focusNodes = List.generate(42, (_) => FocusNode());
-  HijriDate? _focusedDate;
   HijriDate? _pendingFocus;
   bool _synchronizing = false;
   double _dragDistance = 0;
@@ -172,7 +171,6 @@ class _HijriCalendarState extends State<HijriCalendar> {
 
   void _tap(HijriCalendarDay day) {
     if (!_enabled(day, _decoration(day.date))) return;
-    _focusedDate = day.date;
     final index = _controller.grid.days.indexWhere(
       (value) => value.date == day.date,
     );
@@ -182,7 +180,6 @@ class _HijriCalendarState extends State<HijriCalendar> {
   }
 
   void _navigate(int delta) {
-    _focusedDate = null;
     _controller.display(_controller.displayedMonth.advanced(delta));
   }
 
@@ -191,7 +188,10 @@ class _HijriCalendarState extends State<HijriCalendar> {
       return KeyEventResult.ignored;
     }
     final key = event.logicalKey;
-    final current = _focusedDate ?? _controller.displayedMonth.firstDay;
+    final focusedIndex = _focusNodes.indexWhere((node) => node.hasFocus);
+    final current = focusedIndex >= 0
+        ? _controller.grid.days[focusedIndex].date
+        : _controller.displayedMonth.firstDay;
     final engine = _controller.engine;
     final rtl = _controller.configuration.isRightToLeft;
     final int delta;
@@ -255,7 +255,6 @@ class _HijriCalendarState extends State<HijriCalendar> {
       }
     }
     _pendingFocus = date;
-    _focusedDate = date;
     if (!_controller.display(date.hijriMonth)) setState(() {});
   }
 
@@ -553,11 +552,7 @@ class _HijriCalendarState extends State<HijriCalendar> {
           borderRadius: BorderRadius.circular(style.dayCornerRadius),
           onTap: enabled ? () => _tap(day) : null,
           onFocusChange: (focused) {
-            if (mounted) {
-              setState(() {
-                if (focused) _focusedDate = day.date;
-              });
-            }
+            if (mounted) setState(() {});
           },
           child: content,
         ),

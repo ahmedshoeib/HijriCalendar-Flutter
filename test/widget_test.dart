@@ -215,6 +215,22 @@ void main() {
       expect(controller.selection.date, HijriDate(1448, 10, 6));
     },
   );
+  testWidgets(
+    'keyboard uses the displayed grid after programmatic navigation',
+    (tester) async {
+      await tester.pumpWidget(host(HijriCalendar(controller: controller)));
+      await tester.tap(day(5));
+      await tester.pump();
+      controller.nextMonth();
+      await tester.pump();
+      await tester.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+      await tester.pump();
+      await tester.sendKeyEvent(LogicalKeyboardKey.enter);
+      await tester.pump();
+      expect(controller.displayedMonth, HijriMonth(1448, 10));
+      expect(controller.selection.date!.hijriMonth, HijriMonth(1448, 10));
+    },
+  );
   testWidgets('keyboard skips disabled dates and respects RTL', (tester) async {
     controller.configuration = controller.configuration.copyWith(
       localeIdentifier: 'ar',

@@ -376,6 +376,7 @@ class _ShowcaseHomeState extends State<_ShowcaseHome> {
           ),
           const SizedBox(height: 20),
           DropdownButtonFormField<HijriCalendarSystem>(
+            isExpanded: true,
             initialValue: configuration.calendarSystem,
             decoration: InputDecoration(
               labelText: text('Calculation system', 'نظام الحساب'),
@@ -424,6 +425,7 @@ class _ShowcaseHomeState extends State<_ShowcaseHome> {
           ),
           const SizedBox(height: 16),
           DropdownButtonFormField<int>(
+            isExpanded: true,
             initialValue: configuration.firstWeekday,
             decoration: InputDecoration(
               labelText: text('First weekday', 'أول أيام الأسبوع'),
@@ -463,6 +465,7 @@ class _ShowcaseHomeState extends State<_ShowcaseHome> {
           ),
           const SizedBox(height: 16),
           DropdownButtonFormField<HijriLayoutDirection>(
+            isExpanded: true,
             initialValue: configuration.layoutDirection,
             decoration: InputDecoration(
               labelText: text('Layout direction', 'اتجاه العرض'),
