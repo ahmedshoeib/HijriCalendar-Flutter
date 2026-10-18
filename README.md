@@ -32,7 +32,7 @@ dependencies:
   hijri_calendar_flutter: ^1.0.1
 ```
 
-Run `flutter pub get`. The package supports Android, iOS, web, Windows, macOS, and Linux. The source repository is maintained privately; the published package includes the library, example, tests, and documentation under the MIT license.
+Run `flutter pub get`. The package supports Android, iOS, web, Windows, macOS, and Linux. The library, example, tests, and documentation are distributed under the MIT license.
 
 ## Basic calendar
 
