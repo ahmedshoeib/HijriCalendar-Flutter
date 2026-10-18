@@ -1,0 +1,25 @@
+name: hijri_calendar_flutter
+description: A customizable Hijri calendar for Flutter with four calculation systems, Arabic/RTL, date selection, and official month-start corrections.
+version: 1.0.0
+publish_to: none
+repository: https://github.com/ahmedshoeib/HijriCalendar-Flutter
+issue_tracker: https://github.com/ahmedshoeib/HijriCalendar-Flutter/issues
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+  flutter: '>=3.38.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: '>=0.20.2 <0.21.0'
+  timezone: ^0.11.2
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+platforms:
+  android:
+  ios:
+  web:
+  windows:
+  macos:
+  linux:
