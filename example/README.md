@@ -25,4 +25,4 @@ flutter build windows --debug
 flutter build linux --debug
 ```
 
-The package's private Git installation instructions and full API examples are in the repository README.
+The package's pub.dev installation instructions and full API examples are in the root README.

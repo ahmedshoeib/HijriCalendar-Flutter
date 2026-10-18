@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Prepare the first public pub.dev distribution, with hosted installation instructions and package screenshots.
+- Keep the calendar API and calculation behavior unchanged from 1.0.0.
+
 ## 1.0.0
 
 - Add a portable calendar engine with Umm al-Qura, Islamic, Civil, and Tabular Foundation reference data for AH 1300–1600.

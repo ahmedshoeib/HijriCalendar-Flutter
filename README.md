@@ -15,29 +15,24 @@ An inline Hijri calendar for **Android, iOS, web, Windows, macOS, and Linux**, w
 - Touch swipes, mouse interaction, keyboard navigation, and programmatic navigation
 - JSON persistence, a widget-free Dart import, and no native plugins or calendar network requests
 
-## Preview
-
-| English | Arabic / RTL range selection |
-| --- | --- |
-| ![English calendar](documentation/images/calendar-english.png) | ![Arabic calendar](documentation/images/calendar-arabic.png) |
-
 ## Requirements
 
 Flutter **3.38.1+** and Dart **3.10+**. Platform OS/architecture requirements follow the Flutter SDK used by the consuming application. The package contains shared Dart/Flutter code; it does not wrap the iOS view or call platform calendar APIs.
 
-## Install from this private repository
+## Installation
 
-The package is private and deliberately has `publish_to: none`. Add it through Git after your development machine and CI have repository access:
+```sh
+flutter pub add hijri_calendar_flutter
+```
+
+Or add the dependency directly:
 
 ```yaml
 dependencies:
-  hijri_calendar_flutter:
-    git:
-      url: git@github.com:ahmedshoeib/HijriCalendar-Flutter.git
-      ref: main # Pin a release tag or commit for production.
+  hijri_calendar_flutter: ^1.0.1
 ```
 
-Run `flutter pub get`. Credentials and SSH keys belong in your local/CI configuration, never in the dependency URL or source control. There is no pub.dev release at this stage.
+Run `flutter pub get`. The package supports Android, iOS, web, Windows, macOS, and Linux. The source repository is maintained privately; the published package includes the library, example, tests, and documentation under the MIT license.
 
 ## Basic calendar
 
