@@ -23,7 +23,7 @@ An inline Hijri calendar for **Android, iOS, web, Windows, macOS, and Linux**, w
 
 ## Requirements
 
-Flutter **3.38+** and Dart **3.10+**. Platform OS/architecture requirements follow the Flutter SDK used by the consuming application. The package contains shared Dart/Flutter code; it does not wrap the iOS view or call platform calendar APIs.
+Flutter **3.38.1+** and Dart **3.10+**. Platform OS/architecture requirements follow the Flutter SDK used by the consuming application. The package contains shared Dart/Flutter code; it does not wrap the iOS view or call platform calendar APIs.
 
 ## Install from this private repository
 

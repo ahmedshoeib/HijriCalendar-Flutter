@@ -1,6 +1,6 @@
 # Contributing
 
-Use Flutter 3.38+ / Dart 3.10+; CI also exercises current stable Flutter. Fetch private repository access through your own repository-scoped credential. Do not commit tokens, SSH keys, personal signing teams, local SDK paths, or generated build artifacts.
+Use Flutter 3.38.1+ / Dart 3.10+; CI also exercises current stable Flutter. Fetch private repository access through your own repository-scoped credential. Do not commit tokens, SSH keys, personal signing teams, local SDK paths, or generated build artifacts.
 
 Before a pull request:
 

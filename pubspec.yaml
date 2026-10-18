@@ -6,7 +6,7 @@ repository: https://github.com/ahmedshoeib/HijriCalendar-Flutter
 issue_tracker: https://github.com/ahmedshoeib/HijriCalendar-Flutter/issues
 environment:
   sdk: '>=3.10.0 <4.0.0'
-  flutter: '>=3.38.0'
+  flutter: '>=3.38.1'
 dependencies:
   flutter:
     sdk: flutter
